@@ -1,5 +1,8 @@
-let primo = true
+let array = []
+let num = 1
+let last = 100
 let primos = (num) => {
+    let primo = true
     for(i=2; i<num/2; i++){
         if(num%i === 0){
             primo = false
@@ -8,14 +11,17 @@ let primos = (num) => {
         primo = false
     }
     if(primo){
-        console.log("primo")
+        array.push(num)
     }else{
-        console.log("no primo")
+        console.log(primo)
     }
 }
+let test = (num) =>{primos(num)}
 
-let array = []
-for(i=1;i<=10;i++){
-    array.push(i)
+while (num <= last){
+    if (test(num)){
+        array.push(num)
+    }
+    num++
 }
 console.log(array)

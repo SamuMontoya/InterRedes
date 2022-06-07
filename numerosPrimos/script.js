@@ -1,27 +1,34 @@
-let array = []
-let num = 1
-let last = 100
-let primos = (num) => {
-    let primo = true
-    for(i=2; i<num/2; i++){
-        if(num%i === 0){
-            primo = false
+const isPrimo = (num) => {
+    const divisibles = []
+    for (i=1;i<=num;i++) {
+        if (num%i === 0){
+            divisibles.push(i)
         }
-    }if(num === 4 || num === 1){
-        primo = false
     }
-    if(primo){
-        array.push(num)
+    if(divisibles.length === 2){
+        return true
     }else{
-        console.log(primo)
+        return false
     }
 }
-let test = (num) =>{primos(num)}
+const arrayPrimos = []
+for (j=1;j<=1000;j++){
+    if(isPrimo(j)){
+        arrayPrimos.push(j)
+    }
+}
+console.log(arrayPrimos)
 
-while (num <= last){
-    if (test(num)){
-        array.push(num)
+const ejecutar = () => {
+    const inicial = document.getElementById("inicial").value
+    const final = document.getElementById("final").value
+
+    const primos = []
+    for(s=inicial; s<=final; s++){
+        if(isPrimo(s)){
+            primos.push(s)
+        }
     }
-    num++
+    const span = document.getElementById("span")
+    span.innerHTML = primos
 }
-console.log(array)

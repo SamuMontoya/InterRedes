@@ -17,8 +17,8 @@ const ejecutar = () => {
     console.log(fraseConvertida)
 
         if(fraseConvertida === frase){
-            span.innerHTML = ("palindromo")
+            span.innerHTML = ("<h3>Palindromo</h3>")
         }   else{
-            span.innerHTML = ("no palindromo")
+            span.innerHTML = ("<h3>No palindromo</h3>")
         }
 }

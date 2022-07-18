@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+}
+div{
+    background-color: tomato;
+    color: papayawhip;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box; /*no afecte el tamaño*/
+    border: 1px solid black;
+    margin: 10px;
+}
